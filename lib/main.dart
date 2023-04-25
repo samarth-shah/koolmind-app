@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:koolmind/view/home-screen.dart';
 import 'package:koolmind/view/splash-screen.dart';
 
 void main() {
@@ -14,11 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Kool-Mind',
       theme: ThemeData(
         splashColor: Colors.transparent,
       ),
-      home: const HomeScreen(),
+      home: const SplashScreen(),
     );
   }
 }

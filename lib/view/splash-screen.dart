@@ -12,8 +12,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     var splashScreenController = Get.put(SplashScreenController());
 
-    //change time to 3 seconds
-    Timer(const Duration(seconds: 0), () => Get.off(const LoginScreen()));
+    Timer(const Duration(seconds: 3), () => Get.off(const LoginScreen()));
 
     return Container(
       color: splashScreenController.bgColor,
