@@ -18,4 +18,6 @@ class LoginScreenController extends GetxController {
 
   final FocusNode emailFocusNode = FocusNode();
   final FocusNode passFocusNode = FocusNode();
+
+  //TODO: Login API
 }
