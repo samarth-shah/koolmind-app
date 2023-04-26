@@ -79,11 +79,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
               cView(),
-              homeScreenBox(context, controller, Colors.green.shade200,
-                  Colors.orange.shade200, "hand_home", "brick_wall"),
+              homeScreenBox(context, controller, Colors.green, Colors.orange,
+                  "hand_home", "brick_wall", "Build", "Buy"),
               SizedBox(height: controller.medSpace),
               homeScreenBox(context, controller, Colors.blue, Colors.teal,
-                  "handshake", "settings"),
+                  "handshake", "settings", "Services", "Joint Venture"),
             ],
           ),
         ),
@@ -93,7 +93,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 Widget homeScreenBox(BuildContext context, controller, Color rBoxColor,
-    Color lBoxColor, String rImag, String lImag) {
+    Color lBoxColor, String rImag, String lImag, text1, text2) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
     children: [
@@ -116,11 +116,11 @@ Widget homeScreenBox(BuildContext context, controller, Color rBoxColor,
                 fit: BoxFit.fitHeight,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 10),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
               child: Text(
-                "Build",
-                style: TextStyle(
+                text1,
+                style: const TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
@@ -162,11 +162,11 @@ Widget homeScreenBox(BuildContext context, controller, Color rBoxColor,
                 fit: BoxFit.fitHeight,
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 10),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
               child: Text(
-                "Build",
-                style: TextStyle(
+                text2,
+                style: const TextStyle(
                   fontSize: 18,
                   color: Colors.white,
                 ),
