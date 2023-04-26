@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:koolmind/controller/login-screen-controller.dart';
-import 'package:koolmind/view/home-screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -86,7 +85,8 @@ class LoginScreen extends StatelessWidget {
                   ),
                   Center(
                     child: GestureDetector(
-                      onTap: () => Get.off(const HomeScreen()),
+                      onTap: () async =>
+                          await loginScreenController.checkUserPass(),
                       child: Container(
                         height: loginScreenController.buttonHeight,
                         width: loginScreenController.buttonWidth,
